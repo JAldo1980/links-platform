@@ -14,6 +14,3 @@ btn.onclick = function () {
     // step 2 - copy the text
     document.execCommand("copy");
 }
-
-
-
