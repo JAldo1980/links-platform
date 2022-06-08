@@ -69,55 +69,66 @@ NOTE: IMAGES TAKEN FROM UNSPLASH.COM / UIFACES.CO
 /* font-size 62.5% (gives 10px(10px / 16px = 0.625 = 62.5%) - allows me to set REM correctly for my project */
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Rubik', sans-serif;
     line-height: 1.7;
     font-weight: 400;
-    color: #555; 
-    background-color: aliceblue;
+    color: #17383b; 
+    background-color: #98dbc6;
 }
 
 .main-wrapper {
     margin: 0 auto;
     max-width: 1200px;
-    background-color: aliceblue;
+    background-color: #98dbc6;
 }
 
 .header {
-    padding: 5rem;
+    padding: 3rem;
     text-align: center;
 }
 
 .main-img {
-    width: 40rem;
+    width: 20rem;
     max-width: 100%;
 }
 
 .main-header {
-    font-size: 4rem;
+    margin-top: -1.5rem;
+    font-size: 2.5rem;
 }
 
 .bio {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .link-item {
     
     border-style: none;
-    border-radius: 3rem;
+    border-radius: 1.5rem;
     margin: 3rem 2rem;
-    padding: 4rem;
-    background-color: #555;
-    color: #fff;
+    padding: 2.5rem;
+    background-color: #17383b;
     font-size: 3rem;
     text-align: center;
+    color: #fff;
+    box-shadow: 6px 13px 24px -4px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 6px 13px 24px -4px rgba(0, 0, 0, 0.5);
 }
 
 .link-item:hover{
-    background-color: lightgray;
-    transition: .4s;
+    background-color:#2f4c4e;
+    transition: .4s ease-in-out;
+    color: #fff;
+    
+}
+
+.link-tag {
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -130,4 +141,21 @@ body {
     margin-top: 3rem;
     font-size: 1.5rem;
     text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.icon-img-1 {
+    width: 4rem;
+    max-width: 100%;
+}
+
+.icon-img-2 {
+    width: 5.5rem;
+    max-width: 100%;
 }
