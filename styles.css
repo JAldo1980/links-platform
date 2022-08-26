@@ -105,6 +105,10 @@ body {
     font-size: 2rem;
 }
 
+.links {
+    position: relative;
+}
+
 .link-item {
     
     border-style: none;
@@ -120,16 +124,23 @@ body {
 -webkit-box-shadow: 6px 13px 24px -4px rgba(0, 0, 0, 0.5);
 }
 
+.portfolio {
+    background-color: #f2bf25;
+}
+
 .link-item:hover{
     background-color:#2f4c4e;
     transition: .4s ease-in-out;
     color: #fff;
-    
 }
 
 .link-tag {
     color: white;
     text-decoration: none;
+}
+
+.content h4{
+    font-weight: 400;
 }
 
 
@@ -140,7 +151,7 @@ body {
 }
 
 .footer {
-    margin-top: 3rem;
+    margin-top: 11rem;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -165,3 +176,124 @@ body {
 .footer p {
     font-size: 1.7rem;
 }
+
+
+/* modal & overlay section */
+
+
+.overlay {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    height: 130%;
+    width: 100%;
+    top:0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+#modal {
+    margin: 0 auto;
+    position: relative;
+    top: 190px;
+    max-width: 800px;
+    background-color: white;
+    padding: 5em 6em;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.modal-col-1{
+    display: flex;
+}
+
+.box h1{
+    font-size: 5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+ 
+}
+
+.box p{
+    margin-top: 2em;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.modal-atomic {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-atomic a{
+   text-decoration: none;
+   font-size: 2em;
+}
+
+.modal-atomic p{
+    font-size: 2em;
+ }
+
+.button-box {
+    display: flex;
+    justify-content: center;
+}
+
+#close-modal {
+    margin-top: 2em;
+    padding: 1em 3em;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 1.5em;
+    background-color: #f2bf25;
+    color: #fff;
+}
+
+/* email section including popup for copy&paste */
+
+.popup {
+    opacity: 0;
+    width: fit-content;
+    position: absolute;
+    top: 25px;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #fff;
+    padding: .3em 1em;
+    border-radius: 9px;
+    background-color:#f2bf25 ;
+    transition: 0.5s ease-in-out all;
+
+}
+
+.popup.active {
+    animation: copyPopup 1s ease forwards;
+}
+
+/* popup animations */
+
+@keyframes copyPopup {
+    0% {
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -20px);
+    }
+    40% {
+      opacity: 1;
+      pointer-events: all;
+      transform: translate(-50%, 0);
+    }
+    80% {
+      opacity: 1;
+      pointer-events: all;
+      transform: translate(-50%, 0);
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -20px);
+    }
+  }
